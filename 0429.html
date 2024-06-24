@@ -1,0 +1,65 @@
+<html>
+<head>
+  <style>
+      #universe{
+            width:600px;
+            height:600px;
+            backkground:url(bg_stars.jpg)
+            animation:bgmove 2s linaer infinite;
+            position:relative;
+    }
+    @keyframes bgmove{
+
+            0%{background-position:0px 0px;}
+            100%{background-position:0px -3000px;}
+    }
+      #ship{
+    width:60px;
+      height:60px;
+      position:absolute;
+      left:270px;
+      top:540px;
+
+
+      }
+    .ufo{
+    width:60px;
+      height:60px;
+      position:absolute;
+    }
+    
+  </style>
+  <script>
+ function get(id){
+  return document.GetElementById(id);
+ }
+function gets(qs){
+  return Array.from(document.querySelectorAll(qs));
+} 
+  function gameInit(){
+var keys={"":0,"Arrowdown":1,"Arrowleft":2,"Arrowright":3,"ArrowUp":4};
+    var mydir=[0,0,0,0,0];
+  }
+   function mykeydown(ev){
+ev.preventDefault();
+     mydir[keys[ev.key]]=1;
+   } 
+     function mykeyup(ev){
+    ev.preventDefault();
+         mydir[keys[ev.key]]=1;
+       } 
+    function ship_move(){
+   if(mydir[1]);
+    }
+  </script>
+</head>
+<body onkeydown="mykeydown(event);">
+  <div id="universe">
+  <img id="ship" src="ship.png">
+    
+  </div>
+
+  
+</body>
+  
+</html>

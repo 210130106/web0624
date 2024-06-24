@@ -1,0 +1,52 @@
+<html>
+<head>
+  <style>
+    #board{
+          width:600px;
+          height:600px;
+          border:3px solid gray;
+    }
+    #avt{
+    width:51px;
+      height:72px;
+      background:url(avt.png);
+      background-position:-306px -206px;
+    }
+   @keyframes waik{
+0%{background-position-x:0px;}
+100%{background-position-x:-153px;}     
+   }
+    
+  </style>
+<script>
+  function get(id){
+  return document.getElementById(id);
+  }
+ function mykey(ev){
+    <ev.preventDeFault();
+    get("nsg").value=ev.key;
+    var avt="0PX";
+ }
+   IF(ev.key=="ArrowUp"){
+     avtY="0px";
+     pos.y+=5;
+   }else if(ev.key=="arrowleft"){
+     avtY=-72;
+     pos.x-=5;
+   }else if(ev.key=="arrrowright"){
+     avty=-144;
+    pos.x+=5;
+   }eise if(ev.key==""){
+     get("avt").style.animationPlayState="paused";
+   }
+  get("avt").style.backgroundPositionX=avtX;
+  
+</script>
+  
+</head>
+  <body onkeydown="mykey(event);">
+<div id="board">
+  <div id="avt"></div>
+    
+  </body>
+</html>
